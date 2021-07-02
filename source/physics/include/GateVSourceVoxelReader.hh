@@ -48,6 +48,7 @@ public:
 
   virtual void AddVoxel(G4int ix, G4int iy, G4int iz, G4double activity);
 
+  std::map< std::pair<G4double,G4double> , std::vector<std::pair<G4double,G4double> >  > GetTimeActivTables() { return m_TimeActivTables; }
   void SetTimeActivTables( G4String );
 
   void SetTimeSampling ( G4double );

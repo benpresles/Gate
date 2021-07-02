@@ -192,7 +192,9 @@ void GateSourceVoxellized::Update(G4double time)
   } else {
     // the position is set through the source command
   }
-
+  if (this->m_voxelReader->GetTimeActivTables().empty() == false) {
+      this->m_voxelReader->UpdateActivities();
+  }
   GateVSource::Update(time);
 }
 //-------------------------------------------------------------------------------------------------
